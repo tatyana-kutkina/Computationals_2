@@ -1,12 +1,14 @@
 import numpy as np
 import reverse_matrix as rv
+import copy
 
 
 # решение системы Ax = b
 def Gauss(a, b):
     n = len(a)
-    lines = a  # массив строк
-    columns = []
+    lines = copy.deepcopy(a)      # массив строк
+    columns = []        # массив столбцов
+
     # массив столбцов
     for i in range(n):
         c = []
