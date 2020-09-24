@@ -47,7 +47,8 @@ def Gauss(a, b):
 def matrix_norm(a):
     sums = []
     for i in range(len(a)):
-        sums.append(sum(a[i]))
+        arr = np.abs(a[i])
+        sums.append(sum(arr))
     norm = max(sums)
     return norm
 
