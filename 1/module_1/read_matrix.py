@@ -1,5 +1,8 @@
 # чтение матрицы из файла
 # выделяем матрицу A и столбец b, если матрица расширенная
+
+import numpy as np
+
 def read_matrix(file_name):
     lines = []
     with open(file_name) as inf:
@@ -19,10 +22,11 @@ def read_matrix(file_name):
             s = s[:-1]
             a.append([float(j) for j in s])
         return a, b
-    else:       # если обычная квадратная матрица
+    else:  # если обычная квадратная матрица
         a = []
         for i in range(len(lines)):
             s = lines[i].split()
             a.append([float(j) for j in s])
         return a
+
 

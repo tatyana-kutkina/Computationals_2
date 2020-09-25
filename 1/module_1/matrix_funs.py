@@ -4,11 +4,11 @@ import copy
 
 
 # решение системы Ax = b
-def Gauss(a, b):
+def Gauss(a, bb):
     n = len(a)
     lines = copy.deepcopy(a)      # массив строк
     columns = []        # массив столбцов
-
+    b = copy.deepcopy(bb)
     # массив столбцов
     for i in range(n):
         c = []
